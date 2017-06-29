@@ -1,0 +1,17 @@
+create database olympic;
+
+use olympic;
+
+create table olympic(athelete STRING,age INT,country STRING,year STRING,closing STRING,sport STRING,gold INT,silver INT,bronze INT,total INT) row format delimited fields terminated by '\t' stored as textfile;
+
+load data local inpath '/home/edureka/Adithyaws/batch300117/olympix_data.csv' into table olympic;
+
+1.select country,SUM(total) from olympic where sport = "Swimming" group by country;
+
+2.select year,SUM(total) from olympic where country = "India" group by year;
+
+3.select country,SUM(total) from olympic GROUP BY country;
+
+4.select country,SUM(gold) from olympic GROUP BY
+
+
